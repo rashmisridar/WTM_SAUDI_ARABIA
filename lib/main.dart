@@ -60,7 +60,7 @@ class _BasicWidgetState extends State<BasicWidget> {
                 ))),
           ),
         ),
-        endDrawer: RightDrawer(),
+
         drawer: topBottomDrawerClick?TopDrawer():BottomDrawer(),
         body: WidgetBody(),
         bottomNavigationBar: Builder(
@@ -73,48 +73,22 @@ class _BasicWidgetState extends State<BasicWidget> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Container(
-                      width: 40,
-                      height: 40,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(
-                              width: 1.0,
-                              color: Colors.white),
-                          shape: BoxShape.rectangle),
-                      child: IconButton(
-                          iconSize: 25,
-                          color: Colors.white,
-                          icon: Icon(Icons.filter_frames),
-                          onPressed: () {
+                    IconButton(
+                        iconSize: 25,
+                        color: Colors.white,
+                        icon: Icon(Icons.filter_frames),
+                        onPressed: () {
 
-                            if(!btnClicked)
-                            {
-                              setState(() {
-                                topBottomDrawerClick = false;
-                              });
-                              Scaffold.of(context).openDrawer();
-                          }
+                          if(!btnClicked)
+                          {
+                            setState(() {
+                              topBottomDrawerClick = false;
+                            });
+                            Scaffold.of(context).openDrawer();
+                        }
 
-                          }),
-                    ),
-                    Container(
-                      width: 40,
-                      height: 40,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(
-                              width: 1.0,
-                              color: Colors.white),
-                          shape: BoxShape.rectangle),
-                      child: IconButton(
-                          iconSize: 25,
-                          color: Colors.white,
-                          icon: Icon(Icons.cancel),
-                          onPressed: () {
+                        }),
 
-                          }),
-                    ),
                   ],
                 ),
               ),
@@ -126,24 +100,6 @@ class _BasicWidgetState extends State<BasicWidget> {
   }
 }
 
-class RightDrawer extends StatefulWidget {
-  @override
-  _RightDrawerState createState() => _RightDrawerState();
-}
-
-class _RightDrawerState extends State<RightDrawer> {
-
-  @override
-  Widget build(BuildContext context) {
-    return Drawer(
-      elevation: 20,
-      child:Container(
-        color:Color(0xFF202125),
-        child: Center(child: Text("Right Drawer",style: TextStyle(color: Colors.white),)),
-      ),
-    );
-  }
-}
 
 
 class TopDrawer extends StatefulWidget {
