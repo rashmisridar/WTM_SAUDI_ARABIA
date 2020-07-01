@@ -55,7 +55,7 @@ class _BasicWidgetState extends State<BasicWidget> {
                   color: Colors.grey,
                   size: 24,
                 ), label: Text(
-                  "Setting",
+                  "Settings",
                   style: TextStyle(color: Colors.white),
                 ))),
           ),
