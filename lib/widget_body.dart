@@ -8,30 +8,35 @@ class WidgetBody extends StatefulWidget {
 class _WidgetBodyState extends State<WidgetBody> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Container(
-          color: Colors.blue,
-          height: 100,
-          width: double.infinity,
-          child: Stack(
-            fit: StackFit.expand,
-            children: <Widget>[
-              Image.asset("asset/ic_nature.jpg",
-                height: double.infinity,
-                width: double.infinity,),
-              Positioned(
-                top: 70,
-                left: 30,
-                child: Text("Welcome to WTM Saudi Arabia",
-                  style: TextStyle(color: Colors.white,
-                  fontSize: 20),),
-              )
+    return SafeArea(
+      child: Container(
+        color: Colors.brown,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.only(top: 10),
+              height: 250,
+              width: double.infinity,
+              child: Stack(
+                fit: StackFit.expand,
+                children: <Widget>[
+                  Image.asset("asset/ic_nature.jpg",
+                    height: double.infinity,
+                    width: double.infinity,),
+                  Center(
+                    child: Text("Welcome to WTM",
+                      style: TextStyle(color: Colors.white,
+                      fontSize: 20),),
+                  )
 
-            ],
-          ),
+                ],
+              ),
+            ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }

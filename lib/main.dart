@@ -27,7 +27,7 @@ class _BasicWidgetState extends State<BasicWidget> {
       home: Scaffold(
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.blue,
-          child: Icon(Icons.home),
+          child: Icon(Icons.arrow_forward_ios),
         ),
         //for scaffold context
         key: _scaffoldKey,
@@ -51,16 +51,15 @@ class _BasicWidgetState extends State<BasicWidget> {
                     });
                   }
                 }), icon:Icon(
-                  Icons.location_on,
+                  Icons.settings,
                   color: Colors.grey,
                   size: 24,
                 ), label: Text(
-                  "Location",
+                  "Setting",
                   style: TextStyle(color: Colors.white),
                 ))),
           ),
         ),
-
         drawer: topBottomDrawerClick?TopDrawer():BottomDrawer(),
         body: WidgetBody(),
         bottomNavigationBar: Builder(
@@ -76,7 +75,7 @@ class _BasicWidgetState extends State<BasicWidget> {
                     IconButton(
                         iconSize: 25,
                         color: Colors.white,
-                        icon: Icon(Icons.filter_frames),
+                        icon: Icon(Icons.home),
                         onPressed: () {
 
                           if(!btnClicked)
@@ -86,6 +85,29 @@ class _BasicWidgetState extends State<BasicWidget> {
                             });
                             Scaffold.of(context).openDrawer();
                         }
+
+                        }),
+                    IconButton(
+                        iconSize: 25,
+                        color: Colors.white,
+                        icon: Icon(Icons.camera),
+                        onPressed: () {
+
+                        }),
+                    IconButton(
+                        iconSize: 25,
+                        color: Colors.white,
+                        icon: Icon(Icons.verified_user),
+                        onPressed: () {
+
+
+                        }),
+                    IconButton(
+                        iconSize: 25,
+                        color: Colors.white,
+                        icon: Icon(Icons.filter),
+                        onPressed: () {
+
 
                         }),
 
